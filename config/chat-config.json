@@ -1,0 +1,14 @@
+{
+  "names": [
+    "Falcon",
+    "Wolf",
+    "Tiger",
+    "Eagle",
+    "Shadow",
+    "Rocket"
+  ],
+  "ipOverrides": {
+    "192.168.1.10": "Admin",
+    "82.166.20.50": "Yuval"
+  }
+}

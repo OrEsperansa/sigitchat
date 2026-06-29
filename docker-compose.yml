@@ -1,0 +1,16 @@
+services:
+  chatroom:
+    build: .
+    image: oresperansa/sigitchat:latest
+    container_name: sigitchat
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - CONFIG_PATH=/config/chat-config.json
+      - TRUST_PROXY=false
+    volumes:
+      - ./config/chat-config.json:/config/chat-config.json:ro
+    restart: unless-stopped
+    network_mode: bridge

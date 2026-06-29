@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "chatroom.fullname" . }}-config
+  labels:
+    {{- include "chatroom.labels" . | nindent 4 }}
+data:
+  chat-config.json: |
+    {
+      "names": {{ .Values.chatConfig.names | toJson }},
+      "ipOverrides": {{ .Values.chatConfig.ipOverrides | toJson }}
+    }
