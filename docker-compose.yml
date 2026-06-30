@@ -1,8 +1,8 @@
 services:
   chatroom:
     build: .
-    image: oresperansa/sigitchat:latest
-    container_name: sigitchat
+    image: oresperansa/sigit-messanger:latest
+    container_name: sigit-messanger
     ports:
       - "3000:3000"
     environment:

@@ -1,4 +1,4 @@
-# SigitChat
+# Sigit Messanger
 
 Simple offline-ready global chatroom with React, Express, and Socket.IO.
 
@@ -23,7 +23,7 @@ If the file is missing, invalid JSON, or has an invalid shape, the server exits 
 ## Build Docker Image
 
 ```bash
-docker build -t oresperansa/sigitchat:latest .
+docker build -t oresperansa/sigit-messanger:latest .
 ```
 
 ## Run With Docker Compose
@@ -58,7 +58,7 @@ Override values when needed:
 
 ```bash
 helm upgrade --install chatroom ./helm/chatroom \
-  --set image.repository=oresperansa/sigitchat \
+  --set image.repository=oresperansa/sigit-messanger \
   --set image.tag=latest
 ```
 
@@ -75,14 +75,14 @@ Configure names and IP overrides in `helm/chatroom/values.yaml` under `chatConfi
 On a machine with build access:
 
 ```bash
-docker build -t oresperansa/sigitchat:latest .
-docker save oresperansa/sigitchat:latest -o sigitchat.tar
+docker build -t oresperansa/sigit-messanger:latest .
+docker save oresperansa/sigit-messanger:latest -o sigit-messanger.tar
 ```
 
-Move `sigitchat.tar` to the offline server, then load it:
+Move `sigit-messanger.tar` to the offline server, then load it:
 
 ```bash
-docker load -i sigitchat.tar
+docker load -i sigit-messanger.tar
 ```
 
 Run it with Docker Compose or load it into your Kubernetes node/container registry. Runtime requires no internet access, no CDN, no external fonts, no remote assets, and no package installs.

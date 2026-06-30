@@ -60,7 +60,7 @@ export default function App() {
       <section className="chat-panel" aria-label="Global chatroom">
         <header className="chat-header">
           <div>
-            <h1>SigitChat</h1>
+            <h1>Sigit Messanger</h1>
             <p>{assignedName ? `You are ${assignedName}` : "Waiting for assignment"}</p>
           </div>
           <span className={`status status-${status}`}>{status}</span>

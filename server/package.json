@@ -1,5 +1,5 @@
 {
-  "name": "sigitchat-server",
+  "name": "sigit-messanger-server",
   "version": "1.0.0",
   "private": true,
   "type": "commonjs",

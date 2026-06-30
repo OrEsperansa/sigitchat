@@ -127,6 +127,6 @@ io.on("connection", (socket) => {
 });
 
 server.listen(PORT, "0.0.0.0", () => {
-  console.log(`SigitChat listening on port ${PORT}`);
+  console.log(`Sigit Messanger listening on port ${PORT}`);
   console.log(`Config loaded from ${path.resolve(CONFIG_PATH)}`);
 });

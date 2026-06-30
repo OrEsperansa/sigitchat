@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: oresperansa/sigitchat
+  repository: oresperansa/sigit-messanger
   tag: latest
   pullPolicy: IfNotPresent
 
