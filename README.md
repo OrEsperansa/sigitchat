@@ -23,7 +23,7 @@ If the file is missing, invalid JSON, or has an invalid shape, the server exits 
 ## Build Docker Image
 
 ```bash
-docker build -t oresperansa/sigit-messanger:latest .
+docker build -t oresperansa/sigit-messanger:0.2.0 -t oresperansa/sigit-messanger:latest .
 ```
 
 ## Run With Docker Compose
@@ -59,7 +59,7 @@ Override values when needed:
 ```bash
 helm upgrade --install chatroom ./helm/chatroom \
   --set image.repository=oresperansa/sigit-messanger \
-  --set image.tag=latest
+  --set image.tag=0.2.0
 ```
 
 The chart creates a ConfigMap containing `chat-config.json` and mounts it at:
@@ -75,8 +75,8 @@ Configure names and IP overrides in `helm/chatroom/values.yaml` under `chatConfi
 On a machine with build access:
 
 ```bash
-docker build -t oresperansa/sigit-messanger:latest .
-docker save oresperansa/sigit-messanger:latest -o sigit-messanger.tar
+docker build -t oresperansa/sigit-messanger:0.2.0 -t oresperansa/sigit-messanger:latest .
+docker save oresperansa/sigit-messanger:0.2.0 -o sigit-messanger.tar
 ```
 
 Move `sigit-messanger.tar` to the offline server, then load it:
